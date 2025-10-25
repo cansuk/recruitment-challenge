@@ -3,12 +3,29 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-text: #1b1b1b;
+  --color-placeholder: #737373;
+  --color-border: #545454;
+  --color-success: #32be50;
+  --color-error: #dc3545;
+  --color-hover: #dce6e6;
+  --color-accent: #ff733c;
+  --page-max-width: 1280px;
+  --page-padding-x: 78px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-text: var(--color-text);
+  --color-placeholder: var(--color-placeholder);
+  --color-border: var(--color-border);
+  --color-success: var(--color-success);
+  --color-error: var(--color-error);
+  --color-hover: var(--color-hover);
+  --color-accent: var(--color-accent);
   --font-sans: var(--font-geist-sans);
+  --font-oswald: var(--font-oswald);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -22,5 +39,18 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/WebKit */
+}
+
+.font-inter {
+  /* Use next/font variable directly to avoid alias resolution issues */
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
